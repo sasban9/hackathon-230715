@@ -1,5 +1,5 @@
 {
-  "name": "tailorapp",
+  "name": "TailorApp",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -8,12 +8,21 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "pinia": "^2.1.4",
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-regular-svg-icons": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/vue-fontawesome": "^3.0.3",
+    "axios": "^1.4.0",
+    "bootstrap": "^5.3.0",
+    "bootstrap-vue-next": "^0.9.25",
+    "moment": "^2.29.4",
+    "pinia": "^2.1.3",
+    "sweetalert2": "^11.6.13",
     "vue": "^3.3.4",
-    "vue-router": "^4.2.4"
+    "vue-router": "^4.2.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",
-    "vite": "^4.4.6"
+    "vite": "^4.3.9"
   }
 }
