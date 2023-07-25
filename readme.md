@@ -1,19 +1,29 @@
-backend/
-frontend/
-monorepo/
+# tailorapp
 
-tailors panel
-login > 
-niche predefined
-gets section - orders received till now (filtered - tshirt for tshirt tailors)
-tailor picks order
-constraints checked frontend validation
-orders once received cannot be cancelled
-timeline starts after order received
-delivery deadline set
-pending orders
-validation at order select level
-timer for orders
-QA after order delivered
-commission will be updated on QA pass
-weekly metrics
+This template should help get you started developing with Vue 3 in Vite.
+
+## Recommended IDE Setup
+
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+
+## Customize configuration
+
+See [Vite Configuration Reference](https://vitejs.dev/config/).
+
+## Project Setup
+
+```sh
+npm install
+```
+
+### Compile and Hot-Reload for Development
+
+```sh
+npm run dev
+```
+
+### Compile and Minify for Production
+
+```sh
+npm run build
+```
