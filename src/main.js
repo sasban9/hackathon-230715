@@ -1,14 +1,53 @@
-import './assets/main.css'
+import "./assets/main.css";
 
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
+import { createApp } from "vue";
+import { createPinia } from "pinia";
+import { BootstrapVueNext } from "bootstrap-vue-next";
 
-import App from './App.vue'
-import router from './router'
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap-vue-next/dist/bootstrap-vue-next.css";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faArrowRight,
+  faUsers,
+  faGauge,
 
-const app = createApp(App)
+} from "@fortawesome/free-solid-svg-icons";
+import { faUser } from "@fortawesome/free-regular-svg-icons";
 
-app.use(createPinia())
-app.use(router)
+import {
+  FontAwesomeIcon,
+  FontAwesomeLayers,
+  FontAwesomeLayersText
+} from "@fortawesome/vue-fontawesome";
 
-app.mount('#app')
+library.add(
+  faArrowRight,
+  faUser,
+  faUsers,
+  faGauge,
+);
+import App from "./App.vue";
+
+import router from "./router";
+import axios from "axios";
+
+import Swal from "sweetalert2";
+window.Swal = Swal;
+
+axios.defaults.baseURL = "http://127.0.0.1:8000/api/";
+
+axios.defaults.headers.common["Authorization"] =
+  "Bearer " + localStorage.getItem("token");
+axios.defaults.headers.common["Access-Control-Allow-Origin"] = "*";
+
+const app = createApp(App);
+app.use(BootstrapVueNext);
+app.component("FontAwesomeIcon", FontAwesomeIcon);
+app.component("FontAwesomeLayers", FontAwesomeLayers);
+app.component("FontAwesomeLayersText", FontAwesomeLayersText);
+
+app.use(createPinia());
+app.use(router);
+
+app.mount("#app");
